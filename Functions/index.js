@@ -77,8 +77,11 @@ concatQuestion('blake') ===> 'hello blake'
 */
 
 function concatQuestion(str) {
-  // YOUR CODE HERE
+  var str = "blake"
+  str1 = 'hello ' + str
+  return str1
 }
+concatQuestion('blake')
 
 /*
 QUESTION 5
@@ -93,8 +96,10 @@ subtraction(1, 2) ===> -1
 */
 
 function subtraction(num1, num2) {
-  // YOUR CODE HERE
+  return num2 - num1;
 }
+
+subtraction (3,2)
 
 /*
 QUESTION 6
@@ -109,8 +114,10 @@ multiplication(2, 0) ===> 0
 */
 
 function multiplication(num1, num2) {
-  // YOUR CODE HERE
+  return num2 * num1;
 }
+
+multiplication (3,2)
 
 /*
 QUESTION 7
@@ -125,9 +132,10 @@ square(4) ===> 16
 */
 
 function square(num) {
-  // YOUR CODE HERE
+  return num ** 2;
 }
 
+square (4)
 /*
 QUESTION 8
 
@@ -141,8 +149,9 @@ e.g.
 
 var answerToQuestion8;
 
-function question8() {
-  // YOUR CODE HERE
+function question8(str) {
+  var str = 'we can save return values in variables'
+  return str
 }
 
 answerToQuestion8 = question8();
