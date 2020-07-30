@@ -26,10 +26,13 @@ CREATE A FUNCTION THAT ACCEPTS ONE ARGUMENT, THE NUMBER OF TIMES IT WILL CONSOLE
 
 
 */
+function dynamicHelloWorld(number) {
+  for(var i=0; i <= number; i++){
+    console.log('hello world')
+  }
+ }
 
-function dynamicHelloWorld(num) {
-  // CODE HERE
-}
+dynamicHelloWorld(3);
 
 /*
 QUESTION 2
