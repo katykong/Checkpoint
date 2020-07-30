@@ -39,8 +39,8 @@ pushTrue([1,2,3]) ===> [1, 2, 3, 'last element']
 */
 
 function pushString(arr) {
-  // CODE HERE
-  console.log(arr);
+  arr[arr.length] = true
+  return arr
 }
 
 /*
@@ -58,7 +58,8 @@ mutateZeroElem([1,2,3]) ===> [1, 2, 3, true]
 */
 
 function push(array, value) {
-  // CODE HERE
+  arr[array.length] = value
+  return arr
 }
 
 /*
@@ -80,7 +81,7 @@ true
 */
 
 function printElements(array) {
-  // CODE HERE
+  for ( var i = 0; i < array.length; i++)
 }
 
 /*
@@ -109,9 +110,23 @@ unique([1,2,3,2,3,2]) ===> [1, 2, 3];
 */
 
 function unique(array) {
-  // CODE HERE
+  var uniques = []//setup a storage
+  for (var i = 0; i < array.length; i++){ //run the array if its can meet the coniditon. 
+    var inArray = true
+    for( var j = 0; j < uniques.length; j++){
+        if (array[i] === uniques[j]){
+          inArray = false
+          break
+        }
+      }
+      if (inArray){
+        uniques.push(array[i])
+      }
+  }
+  return uniques
 }
 
+unique([1,2,3,2,3,2])
 /*
 QUESTION 5
 
@@ -125,7 +140,17 @@ HINT USE AN INNER FOR-LOOP
 */
 
 function compare(array1, array2) {
-  // CODE HERE
+  for (i = 0; i < array1.length; i++) {
+
+    for (j = 0; j < array2.length; j++) {
+      if (arr2[j] == arr1[i]) {
+        return true
+      }
+    }
+  }
+  return false
+}
+
 }
 
 /*
@@ -141,8 +166,21 @@ compareArrays([1, 2, 3, 4], [1, 2]) ====> [1, 2]
 */
 
 function compareArrays(array1, array2) {
-  // CODE HERE
+  var newArray = [] //create a storage
+  for (i = 0; i < array1.length; i++)//run through the first array 
+  {
+
+    for (j = 0; j < array2.length; j++)// nested loop bring back 2nd array number 
+    {
+      if (array2[j] === array1[i]) {
+        newArray.push(array1[i])// if array 2 number strictly equal to array 1 then push it to the storage
+      }
+    }
+  }
+  return newArray
 }
+
+compareArrays([1, 2, 3, 4], [1, 2])
 
 /*
 QUESTION 7
@@ -156,8 +194,21 @@ compareArraysOpposite([1,2,3,4], [1,3]) ===> [2, 4]
 */
 
 function compareArraysOpposite(array1, array2) {
-  // CODE HERE
+  var newArray = [] //create a storage
+  for (i = 0; i < array2.length; i++)//run through the first array 
+  {
+
+    for (j = 0; j < array1.length; j++)// nested loop bring back 2nd array number 
+    {
+      if (array1[j] !== array2[i]) {
+        newArray.push(array2[i])// if array 2 number does not to array 1 then push it to the storage
+      }
+    }
+  }
+  return newArray
 }
+
+compareArraysOpposite([1,2,3,4], [1,3])
 
 /*
 QUESTION 8
