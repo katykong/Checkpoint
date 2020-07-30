@@ -42,7 +42,9 @@ CREATE A FUNCTION THAT ACCEPTS A STRING AND WILL LOG TO THE CONSOLE EACH CHARACT
 */
 
 function logEachChar(str) {
-  // CODE HERE
+  
+
+  
 }
 
 /*
